@@ -1,5 +1,3 @@
-// src/models/municipality.model.ts
-
 import mongoose from 'mongoose';
 
 const municipalitySchema = new mongoose.Schema({
@@ -30,7 +28,6 @@ departmentSchema.virtual('municipalities', {
   ref: 'Municipality',
   localField: '_id',
   foreignField: 'department',
-  
 });
 
 export const Department = mongoose.model('Department', departmentSchema);
